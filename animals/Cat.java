@@ -11,6 +11,7 @@ public class Cat extends Animal {
     private CharacterService characterService = new CatCharacterService();
 
 
+
     @Override
     public int jump() {
         CharacterValue characterValue = characterService.getCharacterValue(ActType.JUMP, getPower());

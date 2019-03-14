@@ -2,16 +2,11 @@ package ru.geekbrains.lesson1_J2.Service.impl;
 
 import ru.geekbrains.lesson1_J2.Service.CharacterService;
 import ru.geekbrains.lesson1_J2.animals.ActType;
-import ru.geekbrains.lesson1_J2.animals.Animal;
+
 import ru.geekbrains.lesson1_J2.animals.CharacterValue;
 
 public class CatCharacterService implements CharacterService {
 
-    private Animal[] animal;
-
-    public CatCharacterService(Animal[]animal) {
-        this.animal = animal;
-    }
 
     public CatCharacterService() {
     }
@@ -21,12 +16,11 @@ public class CatCharacterService implements CharacterService {
 
 
         CharacterValue characterValue = new CharacterValue();
-        if (type == ActType.JUMP){
-            int value = animal[0].getPower();
-            characterValue.setValue(value);
+        if (type == ActType.JUMP) {
+            characterValue.setValue(power);
             characterValue.setName(ActType.JUMP.toString());
-        }else if (type == ActType.SWIM){
-            System.out.println("Кошки не любят плавать");
+        } else if (type == ActType.SWIM) {
+            System.out.println("Кошка не умеет плавать");
         }
         return characterValue;
     }

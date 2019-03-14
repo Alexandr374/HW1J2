@@ -1,7 +1,7 @@
 package ru.geekbrains.lesson1_J2.animals;
 
-import ru.geekbrains.lesson1_J2.Course.Jump;
-import ru.geekbrains.lesson1_J2.Course.Swim;
+import ru.geekbrains.lesson1_J2.Action.Jump;
+import ru.geekbrains.lesson1_J2.Action.Swim;
 
 public abstract class Animal implements Jump, Swim {
     private int age;
@@ -37,4 +37,5 @@ public abstract class Animal implements Jump, Swim {
     public void setPower(int power) {
         this.power = power;
     }
+
 }

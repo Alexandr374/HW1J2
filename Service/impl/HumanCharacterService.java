@@ -20,12 +20,11 @@ public class HumanCharacterService implements CharacterService {
     public CharacterValue getCharacterValue(ActType type, int power) {
         CharacterValue characterValue = new CharacterValue();
         if (type == ActType.JUMP){
-            int value = animal[2].getPower();
+            int value = power;
             characterValue.setValue(value);
             characterValue.setName(ActType.JUMP.toString());
         }else if (type == ActType.SWIM){
-            int value = animal[2].getPower();
-            characterValue.setValue(value);
+            characterValue.setValue(power);
             characterValue.setName(ActType.SWIM.toString());
         }
         return characterValue;
